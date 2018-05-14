@@ -10,6 +10,8 @@
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
+       <% if !alert.blank? %><p class="alert"><%= alert %></p></p><% end %>
     <%= yield %>
   </body>
 </html>

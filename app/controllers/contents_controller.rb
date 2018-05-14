@@ -1,6 +1,8 @@
 class ContentsController < ApplicationController
   before_action :set_content, only: [:show, :edit, :update, :destroy]
 
+  skip_before_action :check_authorization, :check_authentication, :only => [:show, :home]
+  
   # GET /contents
   # GET /contents.json
   def index
