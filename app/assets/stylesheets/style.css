@@ -1,0 +1,190 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css";
+
+
+/* =INPUT Elements
+-------------------------------------------------------------- */
+
+input:focus, textarea:focus, select:focus {
+    outline-offset: -2px;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: -webkit-focus-ring-color auto 5px;
+    outline-color: #6b8e23;
+    outline-style: auto;
+    outline-width: 5px;
+}
+
+input[type="text"],input[type="email"],input[type="password"],
+textarea {
+  font-size: 1em;
+  background: #F7FAF5; /*eff5e9;fdf9ef*/
+  border: 1px solid #A3B87F; /*556b2f;*/
+  box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+  -moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  padding: 0.3em;
+
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.btn-default.btn1{
+display: inline-block; 
+background: none; 
+color: #fff; 
+border: none; 
+font-size: 1.25em; 
+line-height: 1; 
+font-weight: 400; 
+padding: 0.5em 0.75em; 
+text-decoration: none;
+border-radius:5px; 
+-moz-border-radius:5px; 
+-webkit-border-radius:5px; 
+margin-top: 10px; 
+margin-bottom: 10px;
+background: #556b2f; /* Old browsers */
+box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.75); 
+moz-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.75); 
+-webkit-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.75);
+transition: all 0.3s ease-out; 
+-moz-transition: all 0.3s ease-out; 
+-webkit-transition: all 0.3s ease-out; -o-transition: all 0.3s ease-out;
+}
+.btn-default.btn1:hover{color: #000;
+background: #D3E8AE; /* Old browsers */
+background: -moz-linear-gradient(top,  #D3E8AE 0%, #C0D69A 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bdb76b), color-stop(100%,#DAE8C1)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #D3E8AE 0%,#DAE8C1 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #D3E8AE 0%,#DAE8C1 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #D3E8AE 0%,#DAE8C1 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #D3E8AE 0%,#DAE8C1 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#D3E8AE', endColorstr='#DAE8C1',GradientType=0 ); /* IE6-9 */
+}
+
+.btn {
+    font-size: 1.25em;
+    font-weight: 400;
+    line-height: 1;
+}
+
+a.btn {
+text-decoration: none;
+}
+
+.styled-select {
+  background: #eff5e9;
+  border: 1px solid #D4E0C8;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  font-size: 1.5em;
+  color: #666;
+  padding: 0.1em 0.5em;
+   }
+
+table {
+  border: solid #eee;
+  border-width: thin;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  font-size: 0.75em;
+  }
+
+td, th {
+  padding: 0.25em 0.45em;
+  vertical-align: baseline;
+  }
+
+
+fieldset {
+  margin: 1em auto;
+  padding: 1em;
+  border:1px solid #D0F2DD;
+}
+
+legend {
+  margin: 0 0 0 1em;
+  padding: 1em;
+  width: auto;
+  border: none;
+}
+
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.login-bar {
+  display: block;
+  padding: 10px 30px 5px 30px;
+  float: right;
+  color: #fff;
+  font-size: 0.9em;
+  font-weight: 500; 
+  text-decoration: none; 
+  color: #000;
+}
+
+#home{position:relative;overflow:hidden}
+
+/* =Table Elements
+-------------------------------------------------------------- */
+
+table {
+  border: 1px solid #999;
+  border-collapse: collapse;
+  background: #fff;
+  }
+
+table tr:nth-child(2n+1) {
+  background: #fdf9ef;
+  }
+
+th {
+  color: #ffffff;
+  padding: 3px;
+  background: #666666;
+  vertical-align: top;
+  }
+
+th.sortable {
+  cursor: pointer;
+}
+
+td {
+  padding: 0.4em;
+  border: 1px solid #e0debc;
+  }
+
+
+  
+  
+@media print {
+
+.nav-elements {
+  display: none;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: helvetica, verdana, arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+}
