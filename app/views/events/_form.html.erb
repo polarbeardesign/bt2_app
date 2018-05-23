@@ -1,3 +1,5 @@
+<%= render "scripts" %>
+
 <%= form_with(model: event, local: true) do |form| %>
   <% if event.errors.any? %>
     <div id="error_explanation">
@@ -13,12 +15,12 @@
 
   <div class="field">
     <%= form.label :start_time %>
-    <%= form.datetime_select :start_time %>
+    <%= form.text_field :start_time %>
   </div>
 
   <div class="field">
     <%= form.label :end_time %>
-    <%= form.datetime_select :end_time %>
+    <%= form.text_field :end_time %>
   </div>
 
   <div class="field">
@@ -42,6 +44,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit:data => { :disable_with => "Submitting ..." }, :class => "btn-default btn1" %>
+    <%= form.submit:data => { :disable_with => "Submitting ..." }, :class => "btn-default btn1" %>
   </div>
 <% end %>
