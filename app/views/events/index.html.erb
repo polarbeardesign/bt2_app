@@ -7,11 +7,9 @@
     <tr>
       <th>Event type</th>
       <th>Title</th>
-      <th>Start time</th>
-      <th>End time</th>
+      <th width="240px">Date/Time</th>
       <th>Location</th>
       <th>Description</th>
-      <th></th>
     </tr>
   </thead>
 
@@ -20,11 +18,23 @@
       <tr>
         <td><%= event.event_type %></td>
         <td><%= event.title %></td>
-        <td><%= event.start_time.strftime("%H:%M %b %-d, %Y") %></td>
-        <td><%= event.end_time.strftime("%H:%M %b %-d, %Y") %></td>
+        <td>      
+          <div class="calendar-block cb-inline-table">
+            <div class="calendar_month"><%= event.start_time.strftime('%b') %></div>
+            <div class="calendar_day"><%= event.start_time.strftime('%A') %></div>
+            <div class="calendar_date"><%= event.start_time.strftime('%d') %></div>
+            <div class="calendar_time"><%= event.start_time.strftime('%H:%M') %></div>
+          </div>
+
+          <div class="calendar-block cb-inline-table">
+            <div class="calendar_month"><%= event.end_time.strftime('%b') %></div>
+            <div class="calendar_day"><%= event.end_time.strftime('%A') %></div>
+            <div class="calendar_date"><%= event.end_time.strftime('%d') %></div>
+            <div class="calendar_time"><%= event.end_time.strftime('%H:%M') %></div>
+          </div>
+        </td>
         <td><%= event.location %></td>
-        <td><%= markdown event.description %></td>
-        <td><%= link_to 'Show', event %>, <%= link_to 'Edit', edit_event_path(event) %>, <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= markdown event.description %><br />[<%= link_to 'Show', event %>, <%= link_to 'Edit', edit_event_path(event) %>, <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>]</td>
       </tr>
     <% end %>
   </tbody>
