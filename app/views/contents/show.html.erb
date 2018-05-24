@@ -1,14 +1,9 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @content.title %>
-</p>
+<%= markdown @content.body %>
 
-<p>
-  <strong>Body:</strong>
-  <%= @content.body %>
-</p>
-
-<%= link_to 'Edit', edit_content_path(@content) %> |
-<%= link_to 'Back', contents_path %>
+<% if signed_in?%>
+  <% if current_user.roles.any? {|role| role.name == "superuser" or role.name == "admin"} %>
+    <%= link_to 'Edit', edit_content_path(@content) %> |
+    <%= link_to 'Back', contents_path %>
+  <% end %>
+<% end %>
