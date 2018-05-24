@@ -9,7 +9,12 @@
       <th>Title</th>
       <th width="240px">Date/Time</th>
       <th>Location</th>
-      <th>Description</th>
+      <% if signed_in?%>
+        <% if current_user.roles.any? {|role| role.name == "superuser" or role.name == "admin"} %>
+           <th>Description</th>
+        <% end %>
+      <% end %>
+
     </tr>
   </thead>
 
@@ -34,7 +39,11 @@
           </div>
         </td>
         <td><%= event.location %></td>
-        <td><%= markdown event.description %><br />[<%= link_to 'Show', event %>, <%= link_to 'Edit', edit_event_path(event) %>, <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>]</td>
+          <% if signed_in?%>
+            <% if current_user.roles.any? {|role| role.name == "superuser" or role.name == "admin"} %>
+              <td><%= markdown event.description %><br />[<%= link_to 'Show', event %>, <%= link_to 'Edit', edit_event_path(event) %>, <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>]</td>
+            <% end %>
+          <% end %>
       </tr>
     <% end %>
   </tbody>
