@@ -15,12 +15,12 @@
 
   <div class="field">
     <%= form.label :start_time %>
-    <%= form.text_field :start_time %>
+    <%= form.text_field :start_time, :value => form.object.try(:start_time).try(:strftime,'%Y-%m-%d %H:%M:%S') %>
   </div>
 
   <div class="field">
     <%= form.label :end_time %>
-    <%= form.text_field :end_time %>
+    <%= form.text_field :end_time, :value => form.object.try(:end_time).try(:strftime,'%Y-%m-%d %H:%M:%S') %>
   </div>
 
   <div class="field">
