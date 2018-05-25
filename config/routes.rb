@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :contents
   resources :events
+
+  get 'trans_feed' => 'events#trans_feed', :as => :trans_feed
+  get 'lodging_feed' => 'events#lodging_feed', :as => :lodging_feed
+
   resources :assignments
   resources :grants
   resources :roles

@@ -1,8 +1,8 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
-  skip_before_action :check_authorization, :check_authentication, :only => [:index]
- 
+  skip_before_action :check_authorization, :check_authentication, :only => [:index, :trans_feed, :lodging_feed]
+
   # GET /events
   # GET /events.json
   def index
@@ -62,6 +62,26 @@ class EventsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def trans_feed
+
+    @events = Event.transp.all
+
+    respond_to do |format|
+      format.ics { render :ics => @events }
+    end
+  end
+
+  def lodging_feed
+
+    @events = Event.lodging.all
+
+    respond_to do |format|
+      format.ics { render :ics => @events }
+    end
+  end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
