@@ -8,8 +8,8 @@ CALSCALE:GERGORIAN
 BEGIN:VEVENT
 UID:<%= event.id %>
 DTSTAMP:<%= Time.now.strftime("%Y%m%dT%H%M%S") %>
-DTSTART;TZID=Europe/London:<%= event.start_time.strftime("%Y%m%dT%H%M%S") %>
-DTEND;TZID=Europe/London:<%= event.end_time.strftime("%Y%m%dT%H%M%S") %>
+DTSTART;TZID=Europe/Paris:<%= event.start_time.strftime("%Y%m%dT%H%M%S") %>
+DTEND;TZID=Europe/Paris:<%= event.end_time.strftime("%Y%m%dT%H%M%S") %>
 SUMMARY:<%= event.title %>
 LOCATION:<%= event.location %>
 DESCRIPTION:<%= event.description.gsub(/\r\n/, '\\n') %>.\nMore Info: http://toliveistofly.info/events/<%= event.id %>

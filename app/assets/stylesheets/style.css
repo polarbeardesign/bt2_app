@@ -4,6 +4,13 @@
 /* =INPUT Elements
 -------------------------------------------------------------- */
 
+.boxsizingBorder {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+
 input:focus, textarea:focus, select:focus {
     outline-offset: -2px;
 }
