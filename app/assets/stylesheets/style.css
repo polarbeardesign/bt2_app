@@ -170,8 +170,23 @@ td {
   border: 1px solid #e0debc;
   }
 
+figure {
+  display: inline-block;
+  margin: 1em auto;
+  padding: 1em;
+  border: 1px solid #e0debc;
+  }
 
-  
+figure img {
+  border: 1px solid #000;
+}
+
+
+figcaption {
+  font-style: italic;
+  text-align: center;
+  margin: 0 1em;
+}
   
 @media print {
 
