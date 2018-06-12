@@ -1,3 +1,5 @@
+<%= render "scripts" %>
+
 <%= form_with(model: content, local: true) do |form| %>
   <% if content.errors.any? %>
     <div id="error_explanation">
@@ -10,6 +12,16 @@
       </ul>
     </div>
   <% end %>
+
+  <div class="field">
+    <%= form.label :content_type_id %><br />
+    <%= form.collection_select :content_type_id, ContentType.all, :id, :type_name, options = {:prompt => true}, html_options = {:class => "styled-select boxsizingBorder"} %>
+  </div>
+
+    <div class="field">
+      <%= form.label :publish_date %><br />
+      <%= form.text_field :publish_date %>
+    </div>
 
   <div class="field">
     <%= form.label :title %>

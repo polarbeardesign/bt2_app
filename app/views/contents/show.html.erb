@@ -1,4 +1,9 @@
 
+<% if @content.content_type_id == 2 %>
+  <h1><%= @content.title %></h1>
+  <h3><%= @content.publish_date.strftime("%A - %b %d") %></h3>
+<% end %>
+
 <%= markdown @content.body %>
 
 <% if signed_in?%>

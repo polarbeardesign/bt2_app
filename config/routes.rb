@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :content_types
   resources :images
   resources :contents
   resources :events
