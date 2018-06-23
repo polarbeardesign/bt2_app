@@ -6,6 +6,11 @@
 
 <%= markdown @content.body %>
 
+<br />
+
+    <%= link_to 'Back to Blog', blog_path %>
+
+
 <% if signed_in?%>
   <% if current_user.roles.any? {|role| role.name == "superuser" or role.name == "admin"} %>
     <%= link_to 'Edit', edit_content_path(@content) %> |

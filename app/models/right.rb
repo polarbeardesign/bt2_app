@@ -13,6 +13,7 @@ class Right < ApplicationRecord
     "index" => "READ",
     "sort" => "UPDATE",
     "home" => "READ",
+    "blog" => "READ",
     "member_home" => "READ",
     "news_index" => "READ",
     "new_page" => "READ",

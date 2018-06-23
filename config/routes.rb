@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get 'trans_feed' => 'events#trans_feed', :as => :trans_feed
   get 'lodging_feed' => 'events#lodging_feed', :as => :lodging_feed
+  get 'blog' => 'contents#blog', :as => :blog
+
 
   resources :assignments
   resources :grants

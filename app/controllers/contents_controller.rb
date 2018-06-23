@@ -9,6 +9,10 @@ class ContentsController < ApplicationController
     @contents = Content.all
   end
 
+  def blog
+    @contents = Content.blog.ordered.all
+  end
+
   # GET /contents/1
   # GET /contents/1.json
   def show

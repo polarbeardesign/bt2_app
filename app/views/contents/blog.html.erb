@@ -1,0 +1,11 @@
+<h1>Big Trip Blog</h1>
+
+<% @contents.each do |content| %>
+  <h2><%= link_to content.title, content_path(content) %></h2>
+  <%= content.publish_date.strftime("%a, %b %d") %> &#8211; <%= (truncate(content.body, :length => 50, :separator => ' '))  %> [<em><%= link_to "Read More", content_path(content) %></em>]
+<% end %>
+
+
+<br>
+
+<%= link_to 'New Content', new_content_path %>
